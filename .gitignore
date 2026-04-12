@@ -1,2 +1,4 @@
 .vercel
 ※静止画関連/
+.aidesigner/*
+!.aidesigner/.gitkeep

@@ -1,1370 +1,741 @@
+<!--
+  aesthetic_dna: Premium Neoclassical Investigation | Bento Data Density
+  ui_paradigm: Bottom-Anchored Continuous Scroll Mobile LP (max-width: 750px)
+  palette choice: Deep Navy (#1a2340), Gold (#c9a84c), Orange (#e67e22), Soft Neutral (#f8f9fa)
+-->
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>浮気調査なら綜合探偵社MJリサーチ｜追加料金0円・証拠が撮れなければ返金</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --navy: #1a2340;
-    --navy-light: #243054;
-    --gold: #c9a84c;
-    --gold-light: #e8d48b;
-    --white: #ffffff;
-    --gray-light: #f5f5f5;
-    --gray: #888;
-    --text: #222;
-    --text-light: #555;
-    --red-accent: #c0392b;
-    --orange: #e67e22;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮気調査の無料相談｜綜合探偵社MJリサーチ</title>
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  body {
-    font-family: 'Noto Sans JP', "Hiragino Kaku Gothic ProN", sans-serif;
-    color: var(--text);
-    line-height: 1.8;
-    background: var(--white);
-    max-width: 750px;
-    margin: 0 auto;
-  }
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-  img { max-width: 100%; height: auto; display: block; }
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { DEFAULT: '#1a2340', 800: '#151c33', 900: '#0e1322' },
+                        gold: { DEFAULT: '#c9a84c', light: '#dcc686', dark: '#b09038' },
+                        cta: { DEFAULT: '#e67e22', hover: '#d36e1c' },
+                        offwhite: '#f8f9fa',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Shippori Mincho"', 'serif'],
+                    },
+                    letterSpacing: {
+                        widest: '0.15em',
+                        superwide: '0.25em',
+                    },
+                    boxShadow: {
+                        'premium': '0 10px 40px -10px rgba(26, 35, 64, 0.1)',
+                        'premium-gold': '0 10px 40px -10px rgba(201, 168, 76, 0.15)',
+                        'gold-glow': '0 0 20px rgba(201, 168, 76, 0.15)',
+                        'floating': '0 -5px 20px rgba(0, 0, 0, 0.05)',
+                    },
+                    backgroundImage: {
+                        'grid-dark': "url(\"data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0v1H1v29H0V0h30z' fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E\")",
+                        'grid-light': "url(\"data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0v1H1v29H0V0h30z' fill='%231a2340' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E\")",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-wrap: balance; word-break: auto-phrase; background-color: #e8e8ec; }
+        .text-justify-jp { text-align: justify; text-justify: inter-ideograph; }
 
-  /* ===== HEADER ===== */
-  .header {
-    position: relative;
-    background: var(--navy);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 6px 16px;
-  }
-  .header-logo { width: 44px; filter: invert(1); }
-  .header-brand { color: var(--white); font-size: 11px; flex: 1; margin-left: 10px; }
-  .header-brand strong { font-size: 13px; display: block; }
-  .header-cta {
-    background: var(--orange);
-    color: var(--white);
-    text-decoration: none;
-    padding: 8px 14px;
-    border-radius: 6px;
-    font-size: 11px;
-    font-weight: bold;
-    white-space: nowrap;
-    animation: pulse 2s infinite;
-  }
-  .header-cta-sub {
-    background: transparent;
-    border: 1px solid var(--gold);
-    color: var(--gold);
-    text-decoration: none;
-    padding: 7px 12px;
-    border-radius: 6px;
-    font-size: 11px;
-    white-space: nowrap;
-    margin-right: 8px;
-  }
-  @keyframes pulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(230,126,34,0.5); }
-    50% { box-shadow: 0 0 0 8px rgba(230,126,34,0); }
-  }
+        /* Reveal Animations */
+        .reveal-up { opacity: 0; transform: translateY(30px); transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1); }
+        .reveal-up.is-revealed { opacity: 1; transform: translateY(0); }
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
 
-  /* ===== FIRST VIEW ===== */
-  .fv {
-    background: var(--navy);
-    color: var(--white);
-    padding: 28px 20px 24px;
-    text-align: center;
-  }
+        /* Underline & Decor */
+        .gold-underline { position: relative; display: inline-block; }
+        .gold-underline::after {
+            content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 6px;
+            background: rgba(201, 168, 76, 0.3); z-index: -1;
+        }
+        .text-gold-gradient {
+            background: linear-gradient(180deg, #c9a84c, #b09038);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .decor-line { width: 1px; height: 16px; background: linear-gradient(to bottom, transparent, #c9a84c, transparent); margin: 0 auto; }
 
-  .fv-eyebrow {
-    display: inline-block;
-    background: var(--gold);
-    color: var(--navy);
-    font-size: 12px;
-    font-weight: 700;
-    padding: 5px 16px;
-    border-radius: 2px;
-    letter-spacing: 0.05em;
-    margin-bottom: 20px;
-  }
+        /* Gold Divider */
+        .gold-divider { display: flex; align-items: center; justify-content: center; margin: 32px 0; }
+        .gold-divider::before, .gold-divider::after { content: ''; height: 1px; width: 40px; background-color: #c9a84c; }
+        .gold-divider span { display: inline-block; width: 5px; height: 5px; transform: rotate(45deg); background-color: #c9a84c; margin: 0 14px; }
 
-  .fv-headline {
-    font-family: 'Noto Serif JP', serif;
-    font-size: clamp(20px, 5.5vw, 28px);
-    font-weight: 900;
-    line-height: 1.4;
-    margin-bottom: 6px;
-    color: var(--white);
-  }
-  .fv-headline em {
-    font-style: normal;
-    color: var(--gold);
-  }
+        /* Accordion Animation */
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] summary ~ * { animation: sweep .4s ease-out; }
+        @keyframes sweep { 0% { opacity: 0; margin-top: -8px } 100% { opacity: 1; margin-top: 0 } }
 
-  .fv-number-row {
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    gap: 4px;
-    margin-bottom: 4px;
-  }
-  .fv-number-label {
-    font-family: 'Noto Serif JP', serif;
-    font-size: clamp(18px, 4.5vw, 24px);
-    font-weight: 900;
-    color: var(--white);
-  }
-  .fv-number-val {
-    font-family: 'Noto Serif JP', serif;
-    font-size: clamp(64px, 18vw, 88px);
-    font-weight: 900;
-    color: var(--gold);
-    line-height: 1;
-    letter-spacing: -3px;
-  }
-  .fv-number-val small {
-    font-size: 0.4em;
-    letter-spacing: 0;
-  }
-  .fv-number-note {
-    font-size: 10px;
-    color: rgba(255,255,255,0.3);
-    margin-bottom: 20px;
-  }
+        /* Buttons */
+        .btn-cta {
+            background: linear-gradient(135deg, #e67e22 0%, #c46213 100%);
+            box-shadow: 0 4px 0 #b8611e, 0 6px 16px rgba(230, 126, 34, 0.35);
+            transition: all 0.15s ease;
+        }
+        .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 0 #b8611e, 0 8px 20px rgba(230, 126, 34, 0.4); }
+        .btn-cta:active { transform: translateY(2px); box-shadow: 0 2px 0 #b8611e, 0 3px 8px rgba(230, 126, 34, 0.25); }
 
-  .fv-person {
-    margin: 0 -20px 20px;
-    text-align: center;
-    position: relative;
-  }
-  .fv-person img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    object-position: center 10%;
-    display: block;
-  }
-  .fv-person-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(transparent, rgba(26,35,64,0.9));
-    padding: 32px 20px 12px;
-  }
-  .fv-person-name {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 17px;
-    font-weight: 900;
-    color: var(--white);
-    margin-bottom: 4px;
-  }
-  .fv-person-role {
-    font-size: 11px;
-    color: rgba(255,255,255,0.5);
-    line-height: 1.5;
-  }
+        /* Layout utility */
+        .glass-header { background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(8px); }
 
-  .fv .cta-main {
-    max-width: 380px;
-    padding: 18px 24px;
-    font-size: 16px;
-    box-shadow: 0 4px 0 #b8611e, 0 6px 16px rgba(230,126,34,0.3);
-  }
-  .fv .cta-main:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 0 #b8611e, 0 10px 24px rgba(230,126,34,0.4);
-  }
-  .fv .cta-main:active {
-    transform: translateY(2px);
-    box-shadow: 0 1px 0 #b8611e, 0 2px 6px rgba(230,126,34,0.3);
-  }
-  .fv .cta-main small { font-size: 11px; }
+        /* Default Image Placeholder */
+        img { position: relative; object-fit: cover; }
+        img[src*="office"], img[src*="surveillance"], img[src*="team_matsumaru"], img[src*="report_"], img[src*="equipment"], img[src*="drone"], img[src*="gps"], img[src*="counseling"], img[src*="staff_"] { background-color: #f3f4f6; }
 
-  .fv-badges {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-    flex-wrap: nowrap;
-  }
-  .fv-badge-item {
-    background: white;
-    color: #5a4a1e;
-    border-radius: 12px;
-    padding: 12px 16px 18px;
-    text-align: center;
-    position: relative;
-    box-shadow: 0 2px 12px rgba(180,150,60,0.15);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 80px;
-    flex: 1;
-  }
-  .fv-badge-item::before,
-  .fv-badge-item::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 50px;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-  .fv-badge-item::before { left: 3px; background-image: url('images/badge-left.webp'); }
-  .fv-badge-item::after { right: 3px; background-image: url('images/badge-right.webp'); }
-  .fv-badge-num {
-    display: block;
-    font-family: 'Noto Serif JP', serif;
-    font-size: 22px;
-    font-weight: 900;
-    background: linear-gradient(180deg, #c9a84c, #a07c28);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    line-height: 1.2;
-    filter: drop-shadow(0 1px 1px rgba(160,124,40,0.3));
-    letter-spacing: -0.02em;
-  }
-  .fv-badge-num small {
-    font-size: 12px;
-  }
-  .fv-badge-label {
-    font-size: 10px;
-    color: #9a8a3e;
-    display: block;
-    font-weight: 700;
-    margin-bottom: 4px;
-    order: -1;
-  }
+        /* Forms */
+        select { -webkit-appearance: none; appearance: none; }
+        .select-wrapper { position: relative; }
+        .select-wrapper::after {
+            content: '\25BC'; position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+            font-size: 10px; color: #1a2340; pointer-events: none;
+        }
 
-  /* ===== CTA ===== */
-  .cta-main {
-    display: block;
-    background: var(--orange);
-    color: var(--white);
-    text-align: center;
-    padding: 18px 24px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0 auto 8px;
-    max-width: 400px;
-    transition: transform 0.2s;
-  }
-  .cta-main:hover { transform: scale(1.03); }
-  .cta-main small { display: block; font-size: 12px; font-weight: normal; margin-top: 4px; opacity: 0.9; }
-  .cta-sub {
-    display: block;
-    background: transparent;
-    border: 2px solid var(--gold);
-    color: var(--gold);
-    text-align: center;
-    padding: 14px 24px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    margin: 0 auto 8px;
-    max-width: 400px;
-    transition: transform 0.2s;
-  }
-  .cta-sub:hover { transform: scale(1.03); }
-  .cta-sub small { display: block; font-size: 12px; font-weight: normal; margin-top: 4px; opacity: 0.7; color: #ccc; }
-  .cta-note { text-align: center; font-size: 12px; color: #999; margin-top: 8px; }
-  .cta-break {
-    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
-    padding: 32px 20px;
-    text-align: center;
-  }
-  .cta-break p { color: #ccc; font-size: 14px; margin-bottom: 16px; }
-  .cta-break .em { color: var(--gold-light); font-weight: bold; }
-
-  /* ===== SECTIONS ===== */
-  .section { padding: 48px 20px; }
-  .section-dark { background: var(--navy); color: var(--white); }
-  .section-gray { background: var(--gray-light); }
-  .section-title { text-align: center; margin-bottom: 32px; }
-  .section-title h2 { font-family: 'Noto Serif JP', serif; font-size: 22px; font-weight: 900; line-height: 1.5; margin-bottom: 8px; }
-  .section-title .line { width: 40px; height: 3px; background: var(--gold); margin: 0 auto; }
-  .section-title p { font-size: 13px; color: var(--text-light); margin-top: 8px; }
-  .section-dark .section-title p { color: #aaa; }
-
-  /* ===== PAIN ===== */
-  .pain-list { max-width: 480px; margin: 0 auto; }
-  .pain-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 14px 16px;
-    background: #fff8f8;
-    border-left: 4px solid var(--red-accent);
-    border-radius: 0 8px 8px 0;
-    margin-bottom: 10px;
-    font-size: 14px;
-    line-height: 1.6;
-  }
-  .pain-item .icon { flex-shrink: 0; font-size: 18px; }
-  .pain-answer {
-    text-align: center;
-    margin-top: 28px;
-    font-size: 18px;
-    font-weight: 900;
-    color: var(--navy);
-    line-height: 1.7;
-  }
-  .pain-answer .hl { color: var(--gold); border-bottom: 2px solid var(--gold); }
-
-  /* ===== COUNSELOR BANNER ===== */
-  .counselor-banner {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    background: var(--white);
-    border: 2px solid var(--gold);
-    border-radius: 12px;
-    padding: 16px;
-    margin-top: 24px;
-    max-width: 480px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .counselor-banner img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
-  .counselor-banner-text { font-size: 13px; color: var(--text-light); line-height: 1.7; }
-  .counselor-banner-text strong { color: var(--navy); font-size: 14px; }
-  .counselor-banner-text .tag {
-    display: inline-block;
-    background: var(--gold);
-    color: var(--navy);
-    font-size: 10px;
-    font-weight: bold;
-    padding: 2px 8px;
-    border-radius: 4px;
-    margin-bottom: 4px;
-  }
-
-  /* ===== EVIDENCE / REPORT ===== */
-  .hero-evidence { margin: -8px -20px 28px; position: relative; }
-  .hero-evidence img { width: 100%; }
-  .hero-evidence-caption {
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    background: linear-gradient(transparent, rgba(0,0,0,0.7));
-    color: var(--white);
-    padding: 20px 16px 12px;
-    font-size: 12px;
-    text-align: center;
-  }
-  .report-intro { font-size: 15px; text-align: center; margin-bottom: 24px; line-height: 2; color: var(--text-light); }
-  .report-images {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    margin-bottom: 28px;
-  }
-  .report-images img { border-radius: 6px; border: 1px solid #ddd; }
-  .report-images .full { grid-column: 1 / -1; }
-  .timeline { border-left: 3px solid var(--gold); margin: 0 0 28px 12px; padding-left: 20px; }
-  .timeline-item { margin-bottom: 16px; position: relative; }
-  .timeline-item::before {
-    content: "";
-    position: absolute;
-    left: -27px; top: 8px;
-    width: 10px; height: 10px;
-    background: var(--gold);
-    border-radius: 50%;
-  }
-  .timeline-item.critical::before { background: var(--red-accent); width: 14px; height: 14px; left: -29px; top: 6px; }
-  .timeline-time { font-weight: bold; font-size: 14px; color: var(--navy); }
-  .timeline-text { font-size: 14px; color: var(--text-light); }
-  .timeline-item.critical .timeline-text { color: var(--red-accent); font-weight: bold; }
-
-  /* ===== PRICING ===== */
-  .pricing-grid { display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px; }
-  .pricing-card {
-    border: 2px solid #e0e0e0;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    background: var(--white);
-    position: relative;
-  }
-  .pricing-card.recommended { border-color: var(--gold); box-shadow: 0 4px 20px rgba(201,168,76,0.15); }
-  .pricing-card.recommended::before {
-    content: "人気No.1";
-    position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
-    background: var(--gold); color: var(--navy);
-    font-size: 11px; font-weight: bold;
-    padding: 2px 14px; border-radius: 10px;
-  }
-  .pricing-name { font-size: 16px; font-weight: 900; color: var(--navy); margin-bottom: 4px; }
-  .pricing-desc { font-size: 12px; color: var(--gray); margin-bottom: 12px; }
-  .pricing-price { font-size: 32px; font-weight: 900; color: var(--navy); line-height: 1.2; }
-  .pricing-price small { font-size: 14px; font-weight: normal; color: var(--gray); }
-  .pricing-note { font-size: 12px; color: var(--text-light); margin-top: 8px; }
-  .pricing-bottom {
-    text-align: center;
-    padding: 16px 20px;
-    background: rgba(201,168,76,0.08);
-    border-radius: 10px;
-    margin-bottom: 8px;
-  }
-  .pricing-bottom p { font-size: 14px; color: var(--text); line-height: 1.7; }
-  .pricing-bottom strong { color: var(--navy); font-size: 16px; }
-
-  /* ===== EQUIPMENT / STAFF ===== */
-  .equip-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
-  .equip-grid img { border-radius: 8px; }
-  .equip-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 24px; }
-  .equip-grid-3 img { border-radius: 8px; }
-  .staff-cards { display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px; }
-  .staff-card {
-    display: flex; gap: 16px; align-items: center; padding: 16px;
-    background: rgba(255,255,255,0.06); border-radius: 10px;
-    border: 1px solid rgba(201,168,76,0.2);
-  }
-  .staff-card img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
-  .staff-card-info h4 { font-size: 14px; color: var(--gold); margin-bottom: 2px; }
-  .staff-card-info p { font-size: 13px; color: #bbb; line-height: 1.6; }
-  .equip-features { display: flex; flex-direction: column; gap: 12px; }
-  .equip-feature {
-    display: flex; align-items: flex-start; gap: 12px; padding: 14px;
-    background: rgba(255,255,255,0.05); border-radius: 8px;
-    border: 1px solid rgba(201,168,76,0.2);
-  }
-  .equip-icon { font-size: 24px; flex-shrink: 0; }
-  .equip-feature h4 { font-size: 14px; color: var(--gold); margin-bottom: 2px; }
-  .equip-feature p { font-size: 13px; color: #bbb; line-height: 1.6; }
-
-  /* ===== COMPARISON ===== */
-  .comparison-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 24px; }
-  .comparison-table th, .comparison-table td { padding: 12px 10px; text-align: center; border-bottom: 1px solid #e0e0e0; }
-  .comparison-table th { background: var(--gray-light); font-weight: bold; font-size: 12px; }
-  .comparison-table .mj-col { background: rgba(201,168,76,0.06); font-weight: bold; color: var(--navy); }
-  .comparison-table .mj-head { background: var(--navy); color: var(--gold); font-weight: 900; }
-
-  /* ===== RTB NUMBERS ===== */
-  .social-numbers { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px; }
-  .social-num-card {
-    background: var(--white); border: 1px solid #e0e0e0; border-radius: 10px; padding: 16px; text-align: center;
-  }
-  .social-num-card .num { font-size: 28px; font-weight: 900; color: var(--navy); line-height: 1.2; }
-  .social-num-card .num small { font-size: 14px; }
-  .social-num-card .label { font-size: 12px; color: var(--gray); margin-top: 4px; }
-
-  /* ===== MEDIA ===== */
-  .media-badge {
-    display: flex; align-items: center; gap: 16px; padding: 16px;
-    background: var(--white); border-radius: 10px; border: 1px solid #e0e0e0; margin-bottom: 16px;
-  }
-  .media-badge img { width: 120px; border-radius: 6px; flex-shrink: 0; }
-  .media-badge-text { font-size: 13px; color: var(--text-light); line-height: 1.7; }
-  .media-badge-text strong { color: var(--text); }
-
-  /* ===== YOUTUBE ===== */
-  .youtube-section { margin-bottom: 20px; }
-  .youtube-section img { border-radius: 10px; border: 1px solid #e0e0e0; margin-bottom: 12px; }
-  .youtube-section p { font-size: 13px; color: var(--text-light); text-align: center; line-height: 1.7; }
-
-  /* ===== VOICE ===== */
-  .voice-card {
-    background: var(--white); border-radius: 10px; padding: 20px; margin-bottom: 16px; border: 1px solid #e0e0e0;
-  }
-  .voice-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
-  .voice-stars { color: var(--gold); font-size: 16px; }
-  .voice-attr { font-size: 12px; color: var(--gray); }
-  .voice-text { font-size: 14px; line-height: 1.8; color: var(--text-light); }
-  .voice-image { margin-top: 16px; border-radius: 6px; border: 1px solid #eee; }
-  .voice-evidence { margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-  .voice-evidence img { border-radius: 6px; border: 1px solid #ddd; }
-  .voice-evidence-caption { grid-column: 1 / -1; font-size: 11px; color: var(--gray); text-align: center; margin-top: 4px; }
-
-  /* ===== RESOLVE PATTERNS ===== */
-  .resolve-cards { display: flex; flex-direction: column; gap: 16px; }
-  .resolve-card {
-    border: 2px solid #e0e0e0; border-radius: 12px; padding: 20px; background: var(--white);
-  }
-  .resolve-card h4 { font-size: 16px; font-weight: 900; color: var(--navy); margin-bottom: 8px; }
-  .resolve-card .tag {
-    display: inline-block; font-size: 11px; font-weight: bold; padding: 2px 10px; border-radius: 4px; margin-bottom: 8px;
-  }
-  .resolve-card .tag-blue { background: #e3f2fd; color: #1565c0; }
-  .resolve-card .tag-pink { background: #fce4ec; color: #c62828; }
-  .resolve-card .tag-green { background: #e8f5e9; color: #2e7d32; }
-  .resolve-card p { font-size: 13px; color: var(--text-light); line-height: 1.7; }
-  .resolve-card .example {
-    margin-top: 12px; padding: 12px; background: var(--gray-light); border-radius: 8px;
-    font-size: 13px; color: var(--text-light); line-height: 1.7;
-  }
-  .resolve-card .example strong { color: var(--navy); }
-
-  /* ===== FLOW ===== */
-  .flow-step { display: flex; gap: 16px; margin-bottom: 24px; align-items: flex-start; }
-  .flow-num {
-    width: 40px; height: 40px; background: var(--gold); color: var(--navy);
-    border-radius: 50%; display: flex; align-items: center; justify-content: center;
-    font-weight: 900; font-size: 18px; flex-shrink: 0;
-  }
-  .flow-content h4 { font-size: 16px; font-weight: bold; margin-bottom: 4px; }
-  .flow-content p { font-size: 13px; color: var(--text-light); line-height: 1.7; }
-  .flow-highlight {
-    background: rgba(201,168,76,0.1); border: 1px solid var(--gold); border-radius: 8px;
-    padding: 12px 16px; margin-top: 8px; font-size: 13px; color: var(--navy); font-weight: bold;
-  }
-
-  /* ===== TEAM GRID ===== */
-  .team-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-  .team-card {
-    background: var(--white);
-    border-radius: 10px;
-    overflow: hidden;
-    border: 1px solid #e0e0e0;
-    text-align: center;
-  }
-  .team-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    display: block;
-  }
-  .team-card-body {
-    padding: 14px;
-  }
-  .team-card-body .team-role {
-    font-size: 10px;
-    font-weight: 700;
-    color: var(--white);
-    background: var(--navy);
-    display: inline-block;
-    padding: 2px 10px;
-    border-radius: 100px;
-    margin-bottom: 6px;
-  }
-  .team-card-body .team-name {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--text);
-    margin-bottom: 4px;
-  }
-  .team-card-body .team-desc {
-    font-size: 11px;
-    color: var(--text-light);
-    line-height: 1.6;
-  }
-
-  /* ===== OFFICE GRID ===== */
-  .office-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-  .office-card {
-    background: var(--white);
-    border-radius: 10px;
-    overflow: hidden;
-    border: 1px solid #e0e0e0;
-  }
-  .office-card img {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-    display: block;
-  }
-  .office-card-body {
-    padding: 12px 14px;
-  }
-  .office-card-body strong {
-    font-size: 13px;
-    color: var(--text);
-    display: block;
-    margin-bottom: 3px;
-  }
-  .office-card-body p {
-    font-size: 10px;
-    color: var(--text-light);
-    line-height: 1.5;
-  }
-
-  /* ===== CEO ===== */
-  .ceo-section { display: flex; gap: 20px; align-items: flex-start; }
-  .ceo-photo { width: 120px; border-radius: 10px; flex-shrink: 0; }
-  .ceo-name { font-size: 11px; color: var(--gray); margin-bottom: 2px; }
-  .ceo-name strong { font-size: 16px; color: var(--text); display: block; }
-  .ceo-text { font-size: 13px; color: var(--text-light); line-height: 1.8; margin-top: 8px; }
-
-  /* ===== FAQ ===== */
-  .faq-item { margin-bottom: 16px; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; }
-  .faq-q {
-    background: var(--gray-light); padding: 14px 16px; font-weight: bold; font-size: 14px;
-    display: flex; gap: 8px; align-items: flex-start;
-  }
-  .faq-q-mark { color: var(--gold); font-weight: 900; font-size: 18px; line-height: 1.3; flex-shrink: 0; }
-  .faq-a {
-    padding: 14px 16px; font-size: 13px; line-height: 1.8; color: var(--text-light);
-    display: flex; gap: 8px; align-items: flex-start;
-  }
-  .faq-a-mark { color: var(--navy); font-weight: 900; font-size: 18px; line-height: 1.3; flex-shrink: 0; }
-
-  /* ===== EDUCATION ===== */
-  .edu-text { font-size: 14px; color: var(--text-light); line-height: 2; }
-  .edu-text strong { color: var(--navy); }
-
-  /* ===== AUTHORITY ===== */
-  .authority-item {
-    display: flex; gap: 16px; align-items: flex-start; margin-bottom: 20px; padding: 16px;
-    background: var(--white); border-radius: 10px; border: 1px solid #e0e0e0;
-  }
-  .authority-item img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
-  .authority-name { font-size: 13px; font-weight: bold; margin-bottom: 4px; }
-  .authority-role { font-size: 11px; color: var(--gray); margin-bottom: 6px; }
-  .authority-quote {
-    font-size: 13px; color: var(--text-light); line-height: 1.7;
-    padding-left: 14px; border-left: 3px solid var(--gold);
-  }
-
-  /* ===== BOTTOM CTA ===== */
-  .bottom-cta {
-    background: linear-gradient(rgba(13,21,32,0.88), rgba(26,35,64,0.92)), url('images/staff_okajima.jpg') center/cover no-repeat;
-    padding: 40px 20px; text-align: center; color: var(--white);
-  }
-  .bottom-cta h2 { font-size: 20px; line-height: 1.6; margin-bottom: 8px; }
-  .bottom-cta .whynow { color: var(--gold-light); font-size: 14px; margin-bottom: 24px; }
-
-  /* ===== FOOTER ===== */
-  .footer { background: #111; color: #666; text-align: center; padding: 20px; font-size: 11px; }
-  .footer-license { margin-bottom: 8px; }
-
-  /* ===== RESPONSIVE ===== */
-  @media (max-width: 480px) {
-    .fv-person img { height: 180px; object-position: center 5%; }
-    .ceo-section { flex-direction: column; align-items: center; text-align: center; }
-    .ceo-photo { width: 100px; }
-    .authority-item { flex-direction: column; align-items: center; text-align: center; }
-    .authority-quote { border-left: none; padding-left: 0; border-top: 3px solid var(--gold); padding-top: 10px; }
-    .social-numbers { gap: 8px; }
-    .social-num-card .num { font-size: 22px; }
-    .staff-card { flex-direction: column; align-items: center; text-align: center; }
-    .counselor-banner { flex-direction: column; text-align: center; }
-    .media-badge { flex-direction: column; text-align: center; }
-  }
-</style>
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="text-navy selection:bg-gold selection:text-navy font-sans text-[15px] leading-[1.8]">
+    <main class="w-full max-w-[750px] mx-auto bg-white min-h-screen relative shadow-2xl flex flex-col overflow-x-hidden">
 
-<!-- ===== STICKY HEADER ===== -->
-<header class="header">
-  <img src="images/logo.png" alt="MJリサーチ" class="header-logo">
-  <div class="header-brand">
-    綜合探偵社<br><strong>MJリサーチ</strong>
-  </div>
-  <a href="#inquiry-form" class="header-cta-sub">メール相談</a>
-  <a href="tel:0120-979-383" class="header-cta">電話相談</a>
-</header>
+        <!-- 1. Sticky Header -->
+        <header class="sticky top-0 z-50 w-full glass-header border-b border-gray-100 flex justify-center items-center px-4 py-3">
+            <div class="flex items-center gap-2">
+                <img src="images/logo.png" alt="綜合探偵社MJリサーチ" class="h-6 w-auto object-contain">
+                <span class="font-serif font-bold text-navy text-xs tracking-widest">綜合探偵社MJリサーチ</span>
+            </div>
+        </header>
 
-<!-- ===== FIRST VIEW ===== -->
-<section class="fv">
+        <!-- 2. First View (Hero) -->
+        <section class="relative pb-6 pt-4 px-5 isolate overflow-hidden">
+            <!-- Background: Team Photo -->
+            <img src="images/team_matsumaru.jpg" alt="" class="absolute inset-0 w-full h-full object-cover object-[center_15%] z-[-3]" aria-hidden="true">
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-900 from-30% via-navy/85 to-navy/40 z-[-2]"></div>
+            <div class="absolute inset-0 bg-grid-dark z-[-1] opacity-20"></div>
 
-  <h2 class="fv-headline">
-    <em>裁判で勝てる証拠</em>を、<br>確実におさえます。
-  </h2>
+            <div class="w-full max-w-lg mx-auto flex flex-col relative z-10">
+                <!-- Eyebrow Label -->
+                <div class="mb-3 mt-1">
+                    <span class="inline-block bg-cta text-white text-[11px] font-bold px-3.5 py-1.5 rounded tracking-wide">
+                        NHK・海外メディアに出演する探偵社
+                    </span>
+                </div>
 
-  <div class="fv-number-row">
-    <span class="fv-number-label">調査成功率</span>
-    <span class="fv-number-val">97<small>%</small></span>
-  </div>
-  <p class="fv-number-note">※当社調べ</p>
+                <!-- Headline -->
+                <h1 class="font-serif text-white text-[1.55rem] leading-[1.65] font-bold mb-5 tracking-wider">
+                    調査成功率<span class="text-gold text-[2rem] font-bold mx-0.5">97</span><span class="text-gold">%</span>のプロ集団が<br>
+                    <span class="gold-underline text-gold pb-0.5">「裁判で勝てる証拠」</span>を、<br>
+                    確実にお渡しします。
+                </h1>
 
-  <div class="fv-person">
-    <img src="images/team_investigation.jpg" alt="MJリサーチ調査チーム">
-    <div class="fv-person-caption">
-      <p class="fv-person-name">私たちが、あなたの証拠をおさえます</p>
-      <p class="fv-person-role">調査歴20年以上のベテランチーム / NHK取材協力 / YouTube登録者9万人</p>
+                <!-- Stats Cards -->
+                <div class="grid grid-cols-3 gap-2.5 mb-5">
+                    <div class="bg-white rounded-xl p-3 text-center shadow-sm">
+                        <div class="text-[10px] font-bold text-gray-400 mb-1">お客様満足度</div>
+                        <div class="font-serif font-bold text-[1.5rem] leading-none text-gold-gradient">98<span class="text-xs">%</span></div>
+                    </div>
+                    <div class="bg-white rounded-xl p-3 text-center shadow-sm">
+                        <div class="text-[10px] font-bold text-gray-400 mb-1">全国対応</div>
+                        <div class="font-serif font-bold text-[1.5rem] leading-none text-gold-gradient">12<span class="text-xs">拠点</span></div>
+                    </div>
+                    <div class="bg-white rounded-xl p-3 text-center shadow-sm">
+                        <div class="text-[10px] font-bold text-gray-400 mb-1">調査実績</div>
+                        <div class="font-serif font-bold text-[1.5rem] leading-none text-gold-gradient">20<span class="text-xs">年超</span></div>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <a href="#inquiry-form" class="btn-cta block w-full rounded-xl text-white font-bold text-center py-4 px-6 relative overflow-hidden group">
+                    <span class="relative z-10 flex items-center justify-center gap-2">
+                        まずは無料・匿名で相談する
+                        <i class="ph-bold ph-arrow-right transition-transform group-hover:translate-x-1"></i>
+                    </span>
+                </a>
+
+                <!-- Media Logos -->
+                <div class="mt-5 bg-white rounded-lg px-4 py-4">
+                    <p class="text-[11px] text-center text-navy/60 font-serif font-bold tracking-superwide mb-4">メディア掲載実績</p>
+                    <div class="grid grid-cols-3 gap-x-4 gap-y-4 items-center">
+                        <img src="images/NHK_logo_2020.svg" alt="NHK" class="w-full h-16 object-contain mix-blend-multiply">
+                        <img src="images/miyaneya.jpg" alt="ミヤネ屋" class="w-full h-16 object-contain mix-blend-multiply">
+                        <img src="images/gentousya.png" alt="幻冬舎" class="w-full h-16 object-contain mix-blend-multiply">
+                    </div>
+                    <div class="grid grid-cols-2 gap-x-4 mt-4 items-center max-w-[66%] mx-auto">
+                        <img src="images/kawasakifm.png" alt="かわさきFM" class="w-full h-16 object-contain mix-blend-multiply">
+                        <img src="images/logo_france24.png" alt="France 24" class="w-full h-16 object-contain mix-blend-multiply">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 8. Investigation Quality -->
+        <section class="bg-offwhite px-5 py-10 relative">
+            <div class="text-center mb-6 reveal-up">
+                <div class="gold-divider"><span></span></div>
+                <h2 class="font-serif text-xl font-bold text-navy mb-4 leading-loose tracking-widest">
+                    裁判で使える証拠を<br>確実に押さえます
+                </h2>
+                <p class="text-[11px] text-gray-600 leading-relaxed max-w-sm mx-auto text-center">
+                    大手探偵社出身・調査歴20年超のベテランのみで構成。「いつ・どこで・誰と・何をしたか」を時系列で詳細に記録した報告書をお渡しします。
+                </p>
+            </div>
+
+            <!-- Reports Grid -->
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-200 mb-8 reveal-up">
+                <div class="flex items-center gap-2 mb-3">
+                    <i class="ph-fill ph-folder-open text-navy text-xl"></i>
+                    <h3 class="text-sm font-bold text-navy">弁護士への提出にそのまま使える品質の調査報告書</h3>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <img src="images/report_cover.jpg" alt="調査報告書 表紙" class="w-full aspect-[3/4] object-cover rounded border border-gray-100 shadow-sm">
+                    <img src="images/report_evidence.jpg" alt="調査報告書 証拠写真ページ" class="w-full aspect-[3/4] object-cover rounded border border-gray-100 shadow-sm">
+                </div>
+            </div>
+
+            <!-- Equipment -->
+            <div class="mb-6 reveal-up delay-100">
+                <div class="flex items-center gap-2 mb-4">
+                    <i class="ph-fill ph-camera text-gold text-xl"></i>
+                    <h3 class="text-sm font-bold text-navy">特殊機材を惜しみなく投入</h3>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="rounded-xl overflow-hidden border border-gray-200 bg-white shadow-sm">
+                        <img src="images/equipment_dslr.jpg" alt="一眼レフカメラ群" class="w-full aspect-square object-cover">
+                        <p class="text-[10px] font-bold text-navy text-center py-2">一眼レフ / 望遠レンズ</p>
+                    </div>
+                    <div class="rounded-xl overflow-hidden border border-gray-200 bg-white shadow-sm">
+                        <img src="images/drone.jpg" alt="DJI Mavic 2 ドローン" class="w-full aspect-square object-cover">
+                        <p class="text-[10px] font-bold text-navy text-center py-2">ドローン / DJI Mavic 2</p>
+                    </div>
+                    <div class="rounded-xl overflow-hidden border border-gray-200 bg-white shadow-sm">
+                        <img src="images/gps.jpg" alt="GPS追跡端末" class="w-full aspect-square object-cover">
+                        <p class="text-[10px] font-bold text-navy text-center py-2">GPS端末 / 位置情報追跡</p>
+                    </div>
+                    <div class="rounded-xl overflow-hidden border border-gray-200 bg-white shadow-sm">
+                        <img src="images/equipment_all.jpg" alt="各種調査機材一覧" class="w-full aspect-square object-cover">
+                        <p class="text-[10px] font-bold text-navy text-center py-2">暗視カメラ / 小型機材</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Team Section -->
+        <section class="bg-white px-5 py-10 relative">
+            <div class="text-center mb-6 reveal-up">
+                <div class="gold-divider"><span></span></div>
+                <h2 class="font-serif text-xl font-bold text-navy mb-3 leading-loose tracking-widest">
+                    最初の窓口は「営業」ではなく<br>
+                    <span class="gold-underline px-1">「カウンセラー」</span>です
+                </h2>
+                <p class="text-xs text-gray-600">あなたの話を聞くことが、私たちの最初の仕事です</p>
+            </div>
+
+            <!-- Featured Counselor + Profile + Trust Promise -->
+            <div class="bg-white rounded-xl border border-gray-100 overflow-hidden shadow-premium reveal-up">
+                <!-- Photo + Name -->
+                <div class="flex gap-5 p-5 items-start">
+                    <img src="images/staff_urakoshi2.jpg" alt="チーフアドバイザー 浦越順子" class="w-28 shrink-0 rounded-xl shadow-lg">
+                    <div class="pt-1">
+                        <p class="text-[10px] font-bold text-gold mb-1 tracking-widest">チーフアドバイザー</p>
+                        <p class="font-serif font-bold text-navy text-base mb-3">浦越順子</p>
+                        <div class="space-y-1">
+                            <div class="flex items-start gap-2">
+                                <span class="text-[9px] font-bold text-gray-400 bg-gray-100 rounded px-1.5 py-0.5 shrink-0">経歴</span>
+                                <p class="text-[10px] text-gray-600 leading-relaxed">弁護士秘書 / 新聞社 社長室秘書</p>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-[9px] font-bold text-gray-400 bg-gray-100 rounded px-1.5 py-0.5 shrink-0">資格</span>
+                                <p class="text-[10px] text-gray-600 leading-relaxed">日本能力開発推進協会 認定<br>夫婦カウンセラー</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Message -->
+                <div class="mx-5 mb-4 bg-offwhite rounded-xl p-4 border border-gold/10 relative">
+                    <div class="absolute -top-2 left-10 w-4 h-4 bg-offwhite border-l border-t border-gold/10 rotate-45"></div>
+                    <p class="text-xs text-gray-700 leading-[1.9]">永きにわたってパートナーの浮気に悩む方の相談を受けてまいりました。浮気調査を前提としたカウンセリングではなく、相談者にとって本当に必要なものを見極めるカウンセリングを心がけています。</p>
+                    <p class="text-xs text-gray-700 leading-[1.9] mt-2">調査が終わってからが、本当のスタートです。<br>その先の手助けもMJリサーチにお任せください。</p>
+                </div>
+
+                <!-- Trust Promise -->
+                <div class="mx-5 mb-5 bg-navy/5 rounded-xl p-4">
+                    <h3 class="font-serif font-bold text-navy text-sm mb-3">いきなり契約を迫ることはありません。</h3>
+                    <div class="flex flex-wrap gap-2 text-[10px] items-center font-bold text-gray-600 bg-white py-2 px-3 rounded-lg">
+                        <span>相談</span>
+                        <i class="ph-bold ph-arrow-right text-gold"></i>
+                        <span>プラン提案</span>
+                        <i class="ph-bold ph-arrow-right text-gold"></i>
+                        <span>納得</span>
+                        <i class="ph-bold ph-arrow-right text-gold"></i>
+                        <span class="text-navy">開始</span>
+                    </div>
+                    <p class="text-[10px] text-gray-500 mt-3 tracking-widest">この順番を、必ず守ります。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Pricing Section -->
+        <section class="bg-offwhite px-5 py-10 relative border-y border-gray-200">
+            <div class="text-center mb-6 reveal-up">
+                <div class="gold-divider"><span></span></div>
+                <h2 class="font-serif text-xl font-bold text-navy mb-2 tracking-widest">料金で不安にさせません</h2>
+                            </div>
+
+            <!-- Price display -->
+            <div class="bg-navy rounded-2xl p-6 text-center text-white mb-6 relative shadow-premium overflow-hidden reveal-up">
+                <div class="absolute -right-4 -top-4 text-gold/10 text-9xl leading-none font-serif opacity-30 select-none">&#165;</div>
+
+                <p class="text-[10px] text-gold font-bold mb-3 tracking-widest border border-gold/30 inline-block px-3 py-1 rounded-full bg-gold/10">事前確定・明朗会計</p>
+                <div class="flex items-baseline justify-center gap-1 font-serif mb-3 relative z-10">
+                    <span class="text-sm">1時間</span>
+                    <span class="text-4xl font-bold tracking-tight">8,800</span>
+                    <span class="text-sm">円</span>
+                    <span class="text-xs text-gray-400 font-sans">（税込）〜</span>
+                </div>
+                <p class="text-xs font-bold bg-white/10 py-2 px-4 rounded inline-block shadow-inner relative z-10">
+                    交通費・機材費・報告書作成費 すべて込み
+                </p>
+            </div>
+
+            <!-- Promises List -->
+            <div class="space-y-3 mb-8 reveal-up delay-100">
+                <div class="flex items-start gap-3 p-4 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <i class="ph-fill ph-check-circle text-gold text-lg shrink-0 mt-0.5"></i>
+                    <div>
+                        <p class="text-sm font-bold text-navy mb-1">前金制</p>
+                        <p class="text-[11px] text-gray-600">後から金額が膨らむことはありません</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <i class="ph-fill ph-check-circle text-gold text-lg shrink-0 mt-0.5"></i>
+                    <div>
+                        <p class="text-sm font-bold text-navy mb-1">追加料金 一切なし</p>
+                        <p class="text-[11px] text-gray-600">契約時の金額がすべてです</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <i class="ph-fill ph-check-circle text-gold text-lg shrink-0 mt-0.5"></i>
+                    <div>
+                        <p class="text-sm font-bold text-navy mb-1">経費込み</p>
+                        <p class="text-[11px] text-gray-600">交通費・高速代が別途かかることはありません</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3 p-4 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <i class="ph-fill ph-check-circle text-gold text-lg shrink-0 mt-0.5"></i>
+                    <div>
+                        <p class="text-sm font-bold text-navy mb-1">経費超過も追加請求なし</p>
+                        <p class="text-[11px] text-gray-600">想定を超えても料金は変わりません</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flow -->
+            <div class="text-center border-t border-gray-200 border-dashed pt-6 reveal-up delay-200">
+                <p class="font-serif font-bold text-navy text-sm mb-2">金額に納得してからスタート。</p>
+                <p class="text-xs text-gray-600">相談段階でプランと見積もりを提示します。</p>
+                <div class="flex justify-center flex-wrap gap-2 text-[10px] items-center font-bold text-gray-500 mt-3">
+                    <span>無料相談</span>
+                    <i class="ph-bold ph-arrow-right text-gold"></i>
+                    <span>見積もり提示</span>
+                    <i class="ph-bold ph-arrow-right text-gold"></i>
+                    <span>納得</span>
+                    <i class="ph-bold ph-arrow-right text-gold"></i>
+                    <span class="text-navy">開始</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Support Section -->
+        <section class="bg-white px-5 py-10 relative">
+            <div class="text-center mb-6 reveal-up">
+                <div class="gold-divider"><span></span></div>
+                <h2 class="font-serif text-xl font-bold text-navy mb-3 leading-loose tracking-widest">
+                    証拠を取って<br>終わりではありません
+                </h2>
+                <p class="text-xs text-gray-600">調査後の法的手続き・心のケアまでサポートします</p>
+            </div>
+
+            <!-- Partner Logos Grid -->
+            <div class="grid grid-cols-2 gap-3 mb-8 reveal-up delay-100">
+                <div class="border border-gray-200 rounded-xl p-4 flex items-center justify-center bg-white shadow-sm h-20">
+                    <img src="images/aftercare_01_awaka.jpg" alt="士業とビジネスチームをつくる会 awaka" class="max-h-14 w-auto object-contain">
+                </div>
+                <div class="border border-gray-200 rounded-xl p-4 flex items-center justify-center bg-white shadow-sm h-20">
+                    <img src="images/aftercare_02_veryBest.png" alt="ベリーベスト法律事務所" class="max-h-14 w-auto object-contain">
+                </div>
+                <div class="border border-gray-200 rounded-xl p-4 flex items-center justify-center bg-white shadow-sm h-20">
+                    <img src="images/aftercare_03_recouple.jpg" alt="Recouple" class="max-h-14 w-auto object-contain">
+                </div>
+                <div class="border border-gray-200 rounded-xl p-4 flex items-center justify-center bg-white shadow-sm h-20">
+                    <img src="images/aftercare_04_authense.png" alt="Authense法律事務所" class="max-h-14 w-auto object-contain">
+                </div>
+                <div class="border border-gray-200 rounded-xl p-4 flex items-center justify-center bg-white shadow-sm h-20">
+                    <img src="images/aftercare_06_smile.jpg" alt="夫婦関係カウンセリング すまいる相談室" class="max-h-14 w-auto object-contain">
+                </div>
+                <div class="border border-gray-200 rounded-xl p-4 flex items-center justify-center bg-white shadow-sm h-20">
+                    <img src="images/aftercare_07_rikon.png" alt="一般社団法人 離婚準備支援協会" class="max-h-14 w-auto object-contain">
+                </div>
+            </div>
+
+            <div class="bg-navy rounded-xl p-5 text-white flex gap-4 items-center reveal-up delay-200 shadow-premium relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 opacity-10">
+                    <i class="ph-fill ph-scales text-9xl text-white"></i>
+                </div>
+                <img src="images/counseling.jpg" alt="提携弁護士との打ち合わせの様子" class="shrink-0 relative z-10 w-20 h-20 object-cover rounded-lg border border-white/20">
+                <div class="relative z-10">
+                    <p class="text-xs font-bold mb-2 tracking-widest text-gold">各分野の専門家と提携</p>
+                    <p class="text-[10px] leading-relaxed text-gray-300">
+                        法律事務所・カウンセリング・離婚支援など、各分野の専門家と連携。調査から法的手続き・心のケアまでワンストップで対応します。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Mid-page CTA -->
+        <section class="bg-navy-900 py-10 px-5 text-center relative border-y-4 border-gold">
+            <div class="absolute inset-0 bg-grid-dark z-0 opacity-20"></div>
+            <div class="relative z-10 reveal-up">
+                <i class="ph-fill ph-quotes text-gold/30 text-4xl mb-4 inline-block"></i>
+                <h3 class="font-serif text-xl sm:text-2xl text-white leading-loose font-bold mb-8 tracking-widest">
+                    一人で抱えていた時間を、<br>ここで終わりにしませんか。
+                </h3>
+                <a href="#inquiry-form" class="btn-cta inline-flex items-center justify-center gap-2 rounded-full text-white font-bold text-sm py-4 px-8 w-full max-w-sm">
+                    まずは無料・匿名で相談する <i class="ph-bold ph-arrow-right"></i>
+                </a>
+                <p class="text-gray-400 text-[10px] mt-4">相談だけでも構いません。名前を伏せたままで大丈夫です。</p>
+            </div>
+        </section>
+
+
+        <!-- 9. Case Studies -->
+        <section class="bg-white px-5 py-10 relative border-t border-gray-100">
+            <div class="text-center mb-8 reveal-up">
+                <div class="gold-divider"><span></span></div>
+                <h2 class="font-serif text-xl font-bold text-navy mb-2 tracking-widest">実際の調査事例</h2>
+                                <p class="text-[11px] text-gray-500">個人情報に配慮し、内容を一部変更しています</p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- Case 1 -->
+                <div class="bg-offwhite rounded-2xl border border-gray-200 overflow-hidden reveal-up">
+                    <div class="bg-navy px-4 py-3 flex items-center gap-2">
+                        <span class="text-gold font-serif font-bold text-sm">CASE 01</span>
+                        <span class="text-white text-[11px] font-bold">妻から見た夫の浮気</span>
+                    </div>
+                    <img src="images/017_img_01.png" alt="調査事例1：妻から見た夫の浮気" class="w-1/2 mx-auto block py-3">
+                    <div class="p-4">
+                        <div class="flex gap-3 mb-3">
+                            <div class="bg-white rounded-lg px-3 py-1.5 text-[10px] font-bold text-navy border border-gray-200">依頼者：妻 28歳</div>
+                            <div class="bg-white rounded-lg px-3 py-1.5 text-[10px] font-bold text-navy border border-gray-200">対象者：夫 30歳</div>
+                        </div>
+
+                        <div class="mb-4">
+                            <p class="text-[10px] font-bold text-gold mb-1.5 tracking-widest">依頼経緯</p>
+                            <p class="text-xs text-gray-700 leading-[1.9]">休日でも仕事の打ち合わせと言い、車で出かけることが多くなりました。夫の車を見た時、助手席のカップホルダーに女性が好みそうな飲み物が・・・。</p>
+                        </div>
+
+                        <div class="mb-4">
+                            <p class="text-[10px] font-bold text-gold mb-1.5 tracking-widest">調査内容</p>
+                            <p class="text-xs text-gray-700 leading-[1.9]">旦那さんの休日を調査。昼過ぎに車で出発〜郊外のショッピングモールの駐車場で20歳代の女性と接触、旦那さんの車に乗り出る。コンビニで飲み物を購入後、ラブホテルに入る。9時間の滞在後、ホテルを出てショッピングモールの駐車場に戻り、車内でキスをして別れる。相手女性はショッピングセンターモール駐車場に止めてあった女性車両に乗り込み発進、程近い住宅街の新築一軒家に入り女性宅を判明し調査終了。</p>
+                        </div>
+
+                        <div class="bg-white rounded-lg p-3 border border-gold/20">
+                            <p class="text-[10px] font-bold text-navy mb-1.5"><i class="ph-fill ph-check-circle text-gold mr-1"></i>調査結果</p>
+                            <p class="text-xs text-gray-700 leading-[1.9]">後日、女性も既婚者であったことが判明。今回の調査結果をもとに旦那さんと旦那さんの両親と話し合い、相手も既婚とのことから浮気相手とは別れるとのこととなりました。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 2 -->
+                <div class="bg-offwhite rounded-2xl border border-gray-200 overflow-hidden reveal-up delay-100">
+                    <div class="bg-navy px-4 py-3 flex items-center gap-2">
+                        <span class="text-gold font-serif font-bold text-sm">CASE 02</span>
+                        <span class="text-white text-[11px] font-bold">夫から見た妻の浮気</span>
+                    </div>
+                    <img src="images/017_img_02.png" alt="調査事例2：夫から見た妻の浮気" class="w-1/2 mx-auto block py-3">
+                    <div class="p-4">
+                        <div class="flex gap-3 mb-3">
+                            <div class="bg-white rounded-lg px-3 py-1.5 text-[10px] font-bold text-navy border border-gray-200">依頼者：夫 30歳</div>
+                            <div class="bg-white rounded-lg px-3 py-1.5 text-[10px] font-bold text-navy border border-gray-200">対象者：専業主婦 27歳</div>
+                        </div>
+
+                        <div class="mb-4">
+                            <p class="text-[10px] font-bold text-gold mb-1.5 tracking-widest">依頼経緯</p>
+                            <p class="text-xs text-gray-700 leading-[1.9]">妻がママ友の交流会などに出掛けることが多なり、ある日、LINEのポップアップに「また行こうね」と男性からメッセージが入っているのを見てしまいました。</p>
+                        </div>
+
+                        <div class="mb-4">
+                            <p class="text-[10px] font-bold text-gold mb-1.5 tracking-widest">調査内容</p>
+                            <p class="text-xs text-gray-700 leading-[1.9]">接触する日が分からないとのことなので、平日の幼稚園送りから調査を開始。2日間は買い物をするだけで帰宅。3日目、幼稚園から一旦自宅に帰宅するものの着替えた対象者が自転車で外出。最寄駅から電車で移動し、到着した駅の改札で30代サラリーマン風の男性と接触、何度か会っている様子で、親密度も高く手を繋ぎながら駅近くのラブホテルに直行、4時間のホテル滞在の後、共にホテルを出て駅前で手を振り別れる。追尾対象を浮気男性に切り替え、男性は都内のマンションの一室に入り自宅を判明、翌日、浮気男性宅から追尾を再開、スーツ姿の浮気相手男性が現れ都内の営業会社に出勤し勤務先を判明させ調査終了。</p>
+                        </div>
+
+                        <div class="bg-white rounded-lg p-3 border border-gold/20">
+                            <p class="text-[10px] font-bold text-navy mb-1.5"><i class="ph-fill ph-check-circle text-gold mr-1"></i>調査結果</p>
+                            <p class="text-xs text-gray-700 leading-[1.9]">調査報告後、依頼者様は浮気相手に面識等は無く、SNSなどで知り合った相手ではないだろうかと。子供もまだ小さいので直ぐに離婚する訳ではなく、調査報告をもとに妻と話し合って行きたいとの連絡を受けました。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 3 -->
+                <div class="bg-offwhite rounded-2xl border border-gray-200 overflow-hidden reveal-up delay-200">
+                    <div class="bg-navy px-4 py-3 flex items-center gap-2">
+                        <span class="text-gold font-serif font-bold text-sm">CASE 03</span>
+                        <span class="text-white text-[11px] font-bold">出張で浮気相手と宿泊</span>
+                    </div>
+                    <img src="images/017_img_03.png" alt="調査事例3：出張での浮気" class="w-1/2 mx-auto block py-3">
+                    <div class="p-4">
+                        <div class="flex gap-3 mb-3">
+                            <div class="bg-white rounded-lg px-3 py-1.5 text-[10px] font-bold text-navy border border-gray-200">依頼者：妻</div>
+                            <div class="bg-white rounded-lg px-3 py-1.5 text-[10px] font-bold text-navy border border-gray-200">対象者：夫</div>
+                        </div>
+
+                        <div class="mb-4">
+                            <p class="text-[10px] font-bold text-gold mb-1.5 tracking-widest">依頼経緯</p>
+                            <p class="text-xs text-gray-700 leading-[1.9]">旦那の出張中に会社の知り合いから連絡がありましたが、出張日の話が食い違いました・・・。</p>
+                        </div>
+
+                        <div class="mb-4">
+                            <p class="text-[10px] font-bold text-gold mb-1.5 tracking-widest">調査内容</p>
+                            <p class="text-xs text-gray-700 leading-[1.9]">旦那さんの出張日に合わせて調査。出張当日、一旦会社に出勤するのか分からないとのことで自宅から調査開始。小さめのスーツケースを持った旦那さんを確認し追尾、東京駅から東海道新幹線に乗車、品川駅で40歳代の女性が旦那さんの隣の座席に座り親しげに会話をする。京都で下車し共にタクシーで京都観光を巡りビジネスホテルに共にチェックイン、部屋の入室の共に入りそのまま1泊、翌日部屋から女性だけ退室し京都駅から都内のマンションに入り浮気相手女性の自宅を判明し調査終了。</p>
+                        </div>
+
+                        <div class="bg-white rounded-lg p-3 border border-gold/20">
+                            <p class="text-[10px] font-bold text-navy mb-1.5"><i class="ph-fill ph-check-circle text-gold mr-1"></i>調査結果</p>
+                            <p class="text-xs text-gray-700 leading-[1.9]">旦那さんは2日後に帰宅したとのことであり、出張日の前日を浮気相手と過ごしそのまま京都出張の仕事をしていた。今まで浮気を気にしていたことがなかったので、ショックは大きかったが弊社のアフターフォローを受け今後を考えて行きたいとのこと。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Customer Reviews -->
+            <div class="mt-8 reveal-up">
+                <p class="text-[10px] font-bold text-center text-navy mb-4 tracking-widest">お客様からの声</p>
+                <div class="grid grid-cols-2 gap-3">
+                    <img src="images/018_img_01.png" alt="お客様の声 女性 夫の浮気調査" class="w-full rounded-lg border border-gray-200 shadow-sm">
+                    <img src="images/018_img_02.png" alt="お客様の声 男性 妻の浮気調査" class="w-full rounded-lg border border-gray-200 shadow-sm">
+                    <img src="images/018_img_03.png" alt="お客様の声 男性 妻の浮気調査" class="w-full rounded-lg border border-gray-200 shadow-sm">
+                    <img src="images/018_img_04.png" alt="お客様の声 女性 結婚前調査" class="w-full rounded-lg border border-gray-200 shadow-sm">
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. FAQ -->
+        <section class="bg-offwhite px-5 py-10">
+            <div class="text-center mb-6 reveal-up">
+                <div class="gold-divider"><span></span></div>
+                <h2 class="font-serif text-xl font-bold text-navy mb-2 tracking-widest">よくある質問</h2>
+                            </div>
+
+            <div class="space-y-3 reveal-up delay-100">
+                <details class="group bg-white rounded-xl border border-gray-200 shadow-sm transition-all open:shadow-md">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer list-none p-5 text-sm text-navy font-serif tracking-wider">
+                        <span class="flex items-start gap-3">
+                            <span class="text-gold font-serif text-lg leading-none mt-0.5">Q.</span>
+                            <span class="leading-tight">相談したら契約しないといけませんか？</span>
+                        </span>
+                        <span class="transition group-open:rotate-180 text-gray-400 shrink-0"><i class="ph-bold ph-caret-down"></i></span>
+                    </summary>
+                    <div class="text-xs text-gray-600 px-4 pb-5 pt-1 leading-relaxed border-t border-gray-50 flex items-start gap-3">
+                        <span class="text-navy font-serif font-bold text-lg leading-none mt-1">A.</span>
+                        <span class="mt-1">いいえ。相談・見積もりは完全無料です。「まだ確信が持てない」「とりあえず話を聞いてほしい」という段階でも大歓迎です。いきなり契約を迫ることは絶対にありません。</span>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-gray-200 shadow-sm transition-all open:shadow-md">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer list-none p-5 text-sm text-navy font-serif tracking-wider">
+                        <span class="flex items-start gap-3">
+                            <span class="text-gold font-serif text-lg leading-none mt-0.5">Q.</span>
+                            <span class="leading-tight">夫（妻）にバレませんか？</span>
+                        </span>
+                        <span class="transition group-open:rotate-180 text-gray-400 shrink-0"><i class="ph-bold ph-caret-down"></i></span>
+                    </summary>
+                    <div class="text-xs text-gray-600 px-4 pb-5 pt-1 leading-relaxed border-t border-gray-50 flex items-start gap-3">
+                        <span class="text-navy font-serif font-bold text-lg leading-none mt-1">A.</span>
+                        <span class="mt-1">個人情報保護士が情報管理を徹底しています。完全匿名でのご相談にも対応しており、ご家族に知られることはありません。20年以上の経験で培った調査技術により、対象者に気づかれずに調査を完了します。</span>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-gray-200 shadow-sm transition-all open:shadow-md">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer list-none p-5 text-sm text-navy font-serif tracking-wider">
+                        <span class="flex items-start gap-3">
+                            <span class="text-gold font-serif text-lg leading-none mt-0.5">Q.</span>
+                            <span class="leading-tight">追加料金が発生しませんか？</span>
+                        </span>
+                        <span class="transition group-open:rotate-180 text-gray-400 shrink-0"><i class="ph-bold ph-caret-down"></i></span>
+                    </summary>
+                    <div class="text-xs text-gray-600 px-4 pb-5 pt-1 leading-relaxed border-t border-gray-50 flex items-start gap-3">
+                        <span class="text-navy font-serif font-bold text-lg leading-none mt-1">A.</span>
+                        <span class="mt-1">絶対に発生しません。前金制で、契約時に提示した金額がすべてです。機材費・交通費・報告書作成費も含まれています。経費が想定を超えた場合でも、追加請求は一切いたしません。</span>
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-xl border border-gray-200 shadow-sm transition-all open:shadow-md">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer list-none p-5 text-sm text-navy font-serif tracking-wider">
+                        <span class="flex items-start gap-3">
+                            <span class="text-gold font-serif text-lg leading-none mt-0.5">Q.</span>
+                            <span class="leading-tight">浮気じゃなかったら恥ずかしいのですが...</span>
+                        </span>
+                        <span class="transition group-open:rotate-180 text-gray-400 shrink-0"><i class="ph-bold ph-caret-down"></i></span>
+                    </summary>
+                    <div class="text-xs text-gray-600 px-4 pb-5 pt-1 leading-relaxed border-t border-gray-50 flex items-start gap-3">
+                        <span class="text-navy font-serif font-bold text-lg leading-none mt-1">A.</span>
+                        <span class="mt-1">「シロ」であれば、それは安心の証拠です。疑いを持ったまま過ごす日々のほうがお辛いはずです。結果がどちらでも、あなたの気持ちに整理をつけるお手伝いをします。まずはお気持ちをお聞かせください。</span>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- 11. Final CTA + Form -->
+        <section class="bg-navy px-5 pt-16 pb-20 relative border-t-2 border-gold" id="inquiry-form">
+            <div class="absolute inset-0 bg-grid-dark opacity-30 z-0"></div>
+
+            <div class="text-center mb-8 relative z-10 reveal-up">
+                <h2 class="font-serif text-[1.3rem] font-bold text-white mb-3 leading-loose tracking-widest">
+                    一人で抱える時間を、<br>
+                    今日で終わりにしませんか。
+                </h2>
+                <p class="text-gold/80 text-xs mt-2">まずは匿名で話すだけで構いません</p>
+            </div>
+
+            <!-- Form -->
+            <div class="bg-white rounded-2xl p-6 shadow-2xl relative z-10 reveal-up delay-100 border border-gray-100">
+                <form action="https://mj-research.co.jp/inq/" method="get" class="space-y-5">
+
+                    <div>
+                        <label for="form-name" class="block text-xs font-bold text-navy mb-1.5 flex items-center justify-between">
+                            お名前 <span class="text-[9px] text-gray-500 bg-gray-200 px-1.5 py-0.5 rounded leading-none">匿名可</span>
+                        </label>
+                        <input type="text" id="form-name" name="name" placeholder="匿名でも構いません" class="w-full border-b border-gray-300 px-2 py-2 text-sm text-gray-800 bg-gray-50 rounded-t focus:outline-none focus:border-gold focus:bg-white transition-colors">
+                    </div>
+
+                    <div>
+                        <label for="form-email" class="block text-xs font-bold text-navy mb-1.5 flex items-center justify-between">
+                            メールアドレス <span class="text-[9px] text-white bg-cta px-1.5 py-0.5 rounded leading-none">必須</span>
+                        </label>
+                        <input type="email" id="form-email" name="email" placeholder="example@mail.com" required class="w-full border-b border-gray-300 px-2 py-2 text-sm text-gray-800 bg-gray-50 rounded-t focus:outline-none focus:border-gold focus:bg-white transition-colors">
+                    </div>
+
+                    <div>
+                        <label for="form-phone" class="block text-xs font-bold text-navy mb-1.5 flex items-center justify-between">
+                            電話番号 <span class="text-[9px] text-gray-500 bg-gray-200 px-1.5 py-0.5 rounded leading-none">任意</span>
+                        </label>
+                        <input type="tel" id="form-phone" name="phone" placeholder="090-0000-0000" class="w-full border-b border-gray-300 px-2 py-2 text-sm text-gray-800 bg-gray-50 rounded-t focus:outline-none focus:border-gold focus:bg-white transition-colors">
+                    </div>
+
+                    <div>
+                        <label for="form-message" class="block text-xs font-bold text-navy mb-1.5 flex items-center justify-between">
+                            ご相談内容
+                        </label>
+                        <textarea id="form-message" name="message" rows="4" placeholder="お気軽にご記入ください。どんな些細なことでも構いません。" class="w-full border border-gray-300 rounded p-3 text-sm text-gray-800 bg-gray-50 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors resize-none"></textarea>
+                    </div>
+
+                    <div>
+                        <label for="form-situation" class="block text-xs font-bold text-navy mb-1.5 flex items-center justify-between">
+                            現在の状況 <span class="text-[9px] text-gray-500 bg-gray-200 px-1.5 py-0.5 rounded leading-none">任意</span>
+                        </label>
+                        <div class="select-wrapper">
+                            <select id="form-situation" name="situation" class="w-full border border-gray-300 px-3 py-2.5 text-sm text-gray-800 bg-gray-50 rounded focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors">
+                                <option value="">選択してください</option>
+                                <option value="suspicion">浮気の疑いがある</option>
+                                <option value="evidence">証拠を集めたい</option>
+                                <option value="other_failed">他社で証拠が取れなかった</option>
+                                <option value="undecided">まだ迷っている</option>
+                                <option value="other">その他</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-cta w-full rounded-xl text-white font-bold text-lg py-4 flex items-center justify-center gap-2 mt-2">
+                        無料・匿名で相談する
+                        <i class="ph-bold ph-paper-plane-right"></i>
+                    </button>
+
+                    <p class="text-[10px] text-gray-400 text-center">個人情報保護士在籍。ご相談内容が外部に漏れることはありません。</p>
+
+                    <div class="flex justify-center items-center gap-3 text-[10px] text-gray-500 font-bold divide-x divide-gray-200">
+                        <span class="px-2">相談無料</span>
+                        <span class="px-2">完全匿名</span>
+                        <span class="px-2">24時間受付</span>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- 12. Footer -->
+        <footer class="bg-navy-900 border-t border-white/5 px-5 pt-8 pb-24 text-center text-gray-400 text-[10px]">
+            <img src="images/logo.png" alt="綜合探偵社MJリサーチ" class="h-6 mx-auto mb-5 opacity-60 grayscale">
+            <p class="font-bold text-gray-300 mb-1">綜合探偵社MJリサーチ｜探偵業届出番号：東京都公安委員会 第30200349号</p>
+            <p class="mb-6">東京都中央区新富1-16-8 新富町営和ビルB1階</p>
+            <p>Copyright &copy; MJリサーチ綜合探偵社 All Rights Reserved.</p>
+        </footer>
+
+    </main>
+
+    <!-- Sticky Bottom CTA Bar -->
+    <div class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-floating px-3 py-2.5 flex gap-2.5 max-w-[750px] mx-auto">
+        <a href="tel:0120979383" class="flex-1 bg-white border border-gray-300 text-navy rounded-lg flex flex-col items-center justify-center py-2 active:bg-gray-50 transition-colors">
+            <i class="ph-fill ph-phone text-lg mb-0.5 text-navy"></i>
+            <span class="text-[10px] font-bold tracking-widest">電話で相談</span>
+        </a>
+        <a href="#inquiry-form" class="flex-[2] bg-cta text-white rounded-lg flex flex-col items-center justify-center py-2.5 shadow-md active:bg-cta-hover transition-colors">
+            <span class="text-[10px] font-serif tracking-widest mb-0.5">一人で悩まず、まずは</span>
+            <span class="text-sm font-bold tracking-widest flex items-center gap-1">
+                <i class="ph-bold ph-envelope-simple"></i> 無料で相談する
+            </span>
+        </a>
     </div>
-  </div>
 
-  <div class="fv-badges">
-    <div class="fv-badge-item">
-      <span class="fv-badge-num">97<small>%</small></span>
-      <span class="fv-badge-label">調査成功率</span>
-    </div>
-    <div class="fv-badge-item">
-      <span class="fv-badge-num">98<small>%</small></span>
-      <span class="fv-badge-label">お客様満足度</span>
-    </div>
-    <div class="fv-badge-item">
-      <span class="fv-badge-num">20年<small>以上</small></span>
-      <span class="fv-badge-label">調査歴</span>
-    </div>
-  </div>
-  <p class="fv-number-note" style="margin-top:-12px;">※当社調べ</p>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -10% 0px',
+                threshold: 0.1
+            };
 
-  <a href="tel:0120-979-383" class="cta-main">
-    無料で電話相談する
-    <small>24時間365日・匿名OK・0120-979-383</small>
-  </a>
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-revealed');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
 
-</section>
-
-<!-- ===== SEC1: 悩み共感 ===== -->
-<section class="section">
-  <div class="section-title">
-    <h2>こんなお悩み、<br>ありませんか？</h2>
-    <div class="line"></div>
-  </div>
-
-  <div class="pain-list">
-    <div class="pain-item"><span>浮気の確信はあるのに、証拠がない</span></div>
-    <div class="pain-item"><span>探偵に頼みたいけど、料金が不透明で怖い</span></div>
-    <div class="pain-item"><span>他社に依頼したが、証拠が取れなかった</span></div>
-    <div class="pain-item"><span>相手にバレずに調査できるか不安</span></div>
-    <div class="pain-item"><span>裁判で本当に使える証拠なのか分からない</span></div>
-  </div>
-
-  <p class="pain-answer">
-    すべて、MJリサーチが<br><span class="hl">解決してきた相談</span>です。
-  </p>
-
-  <div class="counselor-banner">
-    <img src="images/staff_urakoshi.jpg" alt="チーフアドバイザー 浦越順子">
-    <div class="counselor-banner-text">
-      <span class="tag">夫婦カウンセラー資格保持</span><br>
-      <strong>チーフアドバイザー 浦越順子</strong><br>
-      弁護士秘書・新聞社秘書を経て、MJリサーチへ。調査を前提としない、あなたにとって本当に必要なものを見極めるカウンセリングを行います。
-    </div>
-  </div>
-</section>
-
-<!-- ===== SEC2: 報告書サンプル + 決定的瞬間 ===== -->
-<section class="section section-gray">
-  <div class="section-title">
-    <h2>この報告書で、<br>裁判に勝てます</h2>
-    <div class="line"></div>
-    <p>調査成功率97% ※当社調べ</p>
-  </div>
-
-  <img src="images/report_cover.jpg" alt="MJリサーチ 調査報告書" style="border-radius:8px; margin:0 auto 20px; max-width:360px;">
-
-  <p class="report-intro">
-    「いつ」「どこで」「誰と」何をしたかを<br>
-    <strong>時系列で詳細に記録</strong>した報告書をお渡しします。
-  </p>
-
-  <h3 style="font-size:15px; margin-bottom:16px; color:var(--navy); text-align:center;">報告書の記録例</h3>
-  <div class="timeline">
-    <div class="timeline-item">
-      <span class="timeline-time">12:34</span>
-      <p class="timeline-text">対象Aは勤務先ビルの正面口から現れ、「新宿駅」方面へ向かう。</p>
-    </div>
-    <div class="timeline-item">
-      <span class="timeline-time">12:50</span>
-      <p class="timeline-text">対象Aは「新宿駅」前で、対象Bと接触する。</p>
-    </div>
-    <div class="timeline-item">
-      <span class="timeline-time">13:44</span>
-      <p class="timeline-text">コンビニエンスストアにて、対象Aが避妊具や飲料などを購入。</p>
-    </div>
-    <div class="timeline-item critical">
-      <span class="timeline-time">13:55</span>
-      <p class="timeline-text">対象Aと対象Bは、ビジネスホテル「○○ホテル」に入る。</p>
-    </div>
-    <div class="timeline-item critical">
-      <span class="timeline-time">13:58</span>
-      <p class="timeline-text">対象Aと対象Bは、1308号室に入室する。</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== CTA① ===== -->
-<div class="cta-break">
-  <p>あなたのケースでも、<span class="em">ここまで押さえられます。</span></p>
-  <a href="tel:0120-979-383" class="cta-main">
-    まずは無料電話相談
-    <small>24時間365日対応・通話料無料</small>
-  </a>
-  <p style="color:#777; font-size:12px; margin-top:8px;">相談だけでも構いません。お気軽にどうぞ。</p>
-</div>
-
-<!-- ===== SEC3: 調査体制・機材 ===== -->
-<section class="section section-dark">
-  <div class="section-title">
-    <h2>なぜここまで撮れるのか</h2>
-    <div class="line"></div>
-    <p>プロの調査員 × 最新機材 × 20年以上のノウハウ</p>
-  </div>
-
-  <div class="staff-cards">
-    <div class="staff-card">
-      <img src="images/staff_wakaume.jpg" alt="調査員 若梅">
-      <div class="staff-card-info">
-        <h4>バイク尾行のスペシャリスト</h4>
-        <p>経験20年以上のベテラン調査員。バイクでの尾行を得意とし、YouTubeでも実際の調査映像を公開中。</p>
-      </div>
-    </div>
-    <div class="staff-card">
-      <img src="images/staff_okajima.jpg" alt="調査員 岡嶋">
-      <div class="staff-card-info">
-        <h4>車両撮影のエキスパート</h4>
-        <p>車両内からの長時間張り込み・撮影に特化。暗所でも鮮明な証拠を押さえます。</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="equip-grid">
-    <img src="images/cameras.jpg" alt="プロ用撮影機材一式">
-    <img src="images/equipment_dslr.jpg" alt="Sony α7III">
-  </div>
-  <div class="equip-grid-3">
-    <img src="images/drone.jpg" alt="DJI Mavic 2 Pro">
-    <img src="images/gps.jpg" alt="GPS追跡端末">
-    <img src="images/equipment_all.jpg" alt="各種調査機材">
-  </div>
-
-  <div class="equip-features">
-    <div class="equip-feature">
-      <span class="equip-icon"></span>
-      <div>
-        <h4>Sony α7III + 暗視カメラ SIONYX AURORA</h4>
-        <p>プロ用ミラーレス一眼、4Kビデオカメラ、暗視カメラ、メガネ型カメラを状況に応じて使い分け。暗闘でも鮮明に撮影。</p>
-      </div>
-    </div>
-    <div class="equip-feature">
-      <span class="equip-icon"></span>
-      <div>
-        <h4>調査員3名 × 車両+バイク体制</h4>
-        <p>1件の調査に調査員3名・車両1〜2台・バイク尾行を配置。対象を見失わない万全の体制。</p>
-      </div>
-    </div>
-    <div class="equip-feature">
-      <span class="equip-icon"></span>
-      <div>
-        <h4>契約当日の調査も可能</h4>
-        <p>最短で契約から10分で調査開始した実績あり。「今日が怪しい」を逃しません。</p>
-      </div>
-    </div>
-    <div class="equip-feature">
-      <span class="equip-icon"></span>
-      <div>
-        <h4>GPS 2週間無料レンタル</h4>
-        <p>事前にGPSで行動パターンを把握。調査日数を減らし、費用を抑えます。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== CTA② ===== -->
-<div class="cta-break">
-  <p>プロの機材と技術で、<span class="em">確実に証拠を押さえます。</span></p>
-  <a href="tel:0120-979-383" class="cta-main">
-    無料電話相談はこちら
-    <small>24時間365日対応・通話料無料</small>
-  </a>
-</div>
-
-<!-- ===== SEC5: 他社比較 ===== -->
-<section class="section section-gray">
-  <div class="section-title">
-    <h2>他社との違い</h2>
-    <div class="line"></div>
-  </div>
-
-  <table class="comparison-table">
-    <thead>
-      <tr>
-        <th></th>
-        <th class="mj-head">MJリサーチ</th>
-        <th>他社A</th>
-        <th>他社B</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="text-align:left; font-weight:bold;">料金体系</td>
-        <td class="mj-col">追加料金なし<br>余り時間返金</td>
-        <td>時間制<br>追加あり</td>
-        <td>成功報酬<br>定義曖昧</td>
-      </tr>
-      <tr>
-        <td style="text-align:left; font-weight:bold;">調査成功率</td>
-        <td class="mj-col">97%</td>
-        <td>非公開</td>
-        <td>非公開</td>
-      </tr>
-      <tr>
-        <td style="text-align:left; font-weight:bold;">調査員の経験</td>
-        <td class="mj-col">大手出身<br>20年以上</td>
-        <td>経験年数<br>非公開</td>
-        <td>3〜5年</td>
-      </tr>
-      <tr>
-        <td style="text-align:left; font-weight:bold;">弁護士連携</td>
-        <td class="mj-col">複数法人<br>と提携</td>
-        <td>1事務所</td>
-        <td>紹介のみ</td>
-      </tr>
-      <tr>
-        <td style="text-align:left; font-weight:bold;">調査開始</td>
-        <td class="mj-col">最短10分</td>
-        <td>翌日以降</td>
-        <td>3日後</td>
-      </tr>
-      <tr>
-        <td style="text-align:left; font-weight:bold;">カウンセラー</td>
-        <td class="mj-col">夫婦カウンセラー<br>資格保持者在籍</td>
-        <td>なし</td>
-        <td>外部委託</td>
-      </tr>
-      <tr>
-        <td style="text-align:left; font-weight:bold;">メディア実績</td>
-        <td class="mj-col">NHK 2番組<br>France 24</td>
-        <td>なし</td>
-        <td>地方紙のみ</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-<!-- ===== SEC6: 権威RTB ===== -->
-<section class="section">
-  <div class="section-title">
-    <h2>選ばれる理由を、<br>数字と実績で。</h2>
-    <div class="line"></div>
-  </div>
-
-  <div class="social-numbers">
-    <div class="social-num-card">
-      <p class="num">97<small>%</small></p>
-      <p class="label">調査成功率</p>
-    </div>
-    <div class="social-num-card">
-      <p class="num">98<small>%</small></p>
-      <p class="label">お客様満足度</p>
-    </div>
-    <div class="social-num-card">
-      <p class="num">20年<small>以上</small></p>
-      <p class="label">の調査歴</p>
-    </div>
-    <div class="social-num-card">
-      <p class="num">9万人<small>超</small></p>
-      <p class="label">YouTube登録者</p>
-    </div>
-    <div class="social-num-card">
-      <p class="num">230万<small>回</small></p>
-      <p class="label">YouTube累計再生</p>
-    </div>
-    <div class="social-num-card">
-      <p class="num">全国12<small>拠点</small></p>
-      <p class="label">対応エリア</p>
-    </div>
-    <div class="social-num-card">
-      <p class="num">NHK<small>2番組</small></p>
-      <p class="label">取材協力実績</p>
-    </div>
-  </div>
-  <p style="text-align:center; font-size:10px; color:#999; margin-top:-16px; margin-bottom:20px;">※当社調べ</p>
-
-  <!-- YouTube -->
-  <div class="youtube-section">
-    <img src="images/youtube_channel.png" alt="MJリサーチ公式YouTubeチャンネル">
-    <p><strong>YouTubeで実際の調査映像を公開中。</strong><br>すべて依頼者の了承を得て撮影。やらせは一切ありません。</p>
-  </div>
-
-  <!-- NHK出演 -->
-  <div class="media-badge">
-    <img src="images/nhk_appearance.jpg" alt="NHKニュースウオッチ9">
-    <div class="media-badge-text">
-      <strong>NHK「ニュースウオッチ9」取材協力</strong><br>
-      ストーカー問題の専門家として当社調査員が出演。（2026年2月放送）
-    </div>
-  </div>
-
-  <div class="media-badge">
-    <img src="images/france24.png" alt="France 24取材">
-    <div class="media-badge-text">
-      <strong>フランス国営放送 France 24 取材</strong><br>
-      日本の探偵業界の代表として国際メディアからも取材を受けています。
-    </div>
-  </div>
-
-  <div class="media-badge">
-    <img src="images/license.jpg" alt="探偵業届出証明書">
-    <div class="media-badge-text">
-      <strong>東京都公安委員会 届出済</strong><br>
-      探偵業届出番号 第30200349号。個人情報保護士在籍。法律に基づいた正規の探偵事業者です。
-    </div>
-  </div>
-
-  <!-- 弁護士提携 -->
-  <div class="authority-item">
-    <img src="images/counseling.jpg" alt="提携弁護士">
-    <div>
-      <p class="authority-name">提携弁護士法人・専門家ネットワーク</p>
-      <p class="authority-role">弁護士・行政書士・司法書士と連携</p>
-      <p class="authority-quote">
-        弁護士法人えそら、銀座エール法律事務所、弁護士法人ルネサンスなど複数の法律事務所と提携。調査から法的手続きまで、ワンストップで対応します。
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== CTA③ ===== -->
-<div class="cta-break">
-  <p>NHK取材協力、YouTube登録者9万人。<span class="em">実力を公開できる探偵社です。</span></p>
-  <a href="tel:0120-979-383" class="cta-main">
-    無料電話相談はこちら
-    <small>24時間365日対応・通話料無料</small>
-  </a>
-</div>
-
-<!-- ===== SEC7: お客様の声 ===== -->
-<section class="section section-gray">
-  <div class="section-title">
-    <h2>相談者様の声</h2>
-    <div class="line"></div>
-    <p>エキテン総合評価 4.20 / Google口コミ多数</p>
-  </div>
-
-  <div class="voice-card">
-    <div class="voice-header">
-      <span class="voice-stars">★★★★★</span>
-      <span class="voice-attr">40代女性 / 配偶者の浮気調査</span>
-    </div>
-    <p class="voice-text">
-      3ヶ月悩んだ末に相談しました。翌日の調査で決定的な証拠が取れ、弁護士の先生と連携して有利な条件で離婚が成立しました。もっと早く相談すればよかったです。
-    </p>
-  </div>
-
-  <div class="voice-card">
-    <div class="voice-header">
-      <span class="voice-stars">★★★★★</span>
-      <span class="voice-attr">30代女性 / 他社からの乗り換え</span>
-    </div>
-    <p class="voice-text">
-      別の探偵社に依頼して証拠が取れず、藁にもすがる思いでMJリサーチに相談しました。女性カウンセラーの方が親身に聞いてくれて、1回の調査で決定的な証拠を押さえてくれました。報告書の写真の鮮明さに驚きました。
-    </p>
-  </div>
-
-  <div class="voice-card">
-    <div class="voice-header">
-      <span class="voice-stars">★★★★★</span>
-      <span class="voice-attr">50代男性 / 配偶者の浮気調査</span>
-    </div>
-    <p class="voice-text">
-      恥ずかしさもあり相談をためらっていましたが、電話で気軽に相談できたのがよかったです。料金もプランで明示されていて追加請求がなく安心でした。法的にも使える形で証拠を押さえてもらえました。
-    </p>
-  </div>
-
-  <div class="voice-card">
-    <div class="voice-header">
-      <span class="voice-stars">★★★★★</span>
-      <span class="voice-attr">30代女性 / 初めての探偵相談</span>
-    </div>
-    <p class="voice-text">
-      YouTubeで調査の様子を見て「ここなら信頼できる」と思い相談しました。実際の調査もYouTubeで見たまま本気の調査で、現場目線からの的確な指示で証拠取得に成功。心強い味方になっていただきました。
-    </p>
-  </div>
-
-  <div class="voice-card">
-    <div class="voice-header">
-      <span class="voice-stars">★★★★★</span>
-      <span class="voice-attr">40代女性 / 婚前調査</span>
-    </div>
-    <p class="voice-text">
-      結婚前に相手の素性を調べていただきました。2〜3日で結果が出て、その前に発覚したことが調査結果にも表れていました。調査員の方々に大変感謝しています。
-    </p>
-  </div>
-
-  <div class="voice-card">
-    <div class="voice-header">
-      <span class="voice-stars">★★★★★</span>
-      <span class="voice-attr">40代男性 / 人探し調査</span>
-    </div>
-    <p class="voice-text">
-      浮気調査以外の案件でしたが、迅速に対応していただきました。調査期間中もこまめに電話をいただき、進捗が分かるので安心できました。料金も経費込みの総額で分かりやすかったです。
-    </p>
-  </div>
-
-</section>
-
-<!-- ===== CTA④ ===== -->
-<div class="cta-break">
-  <p>まずは状況をお聞かせください。<span class="em">一緒に最善の方法を考えます。</span></p>
-  <a href="tel:0120-979-383" class="cta-main">
-    今すぐ無料で電話相談する
-    <small>24時間365日対応・通話料無料・0120-979-383</small>
-  </a>
-  <a href="#inquiry-form" class="cta-sub" style="margin-top:10px;">
-    メールで無料相談する
-    <small>24時間受付・匿名OK</small>
-  </a>
-</div>
-
-<!-- ===== SEC9: ご依頼の流れ ===== -->
-<section class="section">
-  <div class="section-title">
-    <h2>ご依頼の流れ</h2>
-    <div class="line"></div>
-    <p>相談から最短10分で調査開始</p>
-  </div>
-
-  <div class="flow-step">
-    <div class="flow-num">1</div>
-    <div class="flow-content">
-      <h4>電話・メールで無料相談</h4>
-      <p>分からない事だらけでも安心してください。24時間365日、夫婦カウンセラー資格を持つ専門スタッフがご相談をお受けします。</p>
-    </div>
-  </div>
-  <div class="flow-step">
-    <div class="flow-num">2</div>
-    <div class="flow-content">
-      <h4>打ち合わせ（対面 or オンライン）</h4>
-      <p>来社・ご指定の場所・ZOOMなどオンラインも対応。全国12拠点で対応可能です。</p>
-    </div>
-  </div>
-  <div class="flow-step">
-    <div class="flow-num">3</div>
-    <div class="flow-content">
-      <h4>プラン提示・お見積り（無料）</h4>
-      <p>状況に合った最適なプランをご提案。料金にご納得いただくまで費用は一切かかりません。<strong>追加料金も一切なし。</strong></p>
-    </div>
-  </div>
-  <div class="flow-step">
-    <div class="flow-num">4</div>
-    <div class="flow-content">
-      <h4>契約・調査開始</h4>
-      <p>探偵業法に基づいた書面で正式に契約。その後すぐに調査を開始します。</p>
-      <div class="flow-highlight">最短10分で調査開始した実績あり。「今日が怪しい」を逃しません。</div>
-    </div>
-  </div>
-  <div class="flow-step">
-    <div class="flow-num">5</div>
-    <div class="flow-content">
-      <h4>報告書の提出</h4>
-      <p>重要な内容や写真を詳細に記載した報告書を作成。弁護士への提出にそのまま使える品質です。</p>
-    </div>
-  </div>
-  <div class="flow-step">
-    <div class="flow-num">6</div>
-    <div class="flow-content">
-      <h4>アフターフォロー</h4>
-      <p>調査終了後も継続サポート。提携弁護士への引き継ぎ、夫婦カウンセリング、今後の方針相談まで対応します。</p>
-      <div class="flow-highlight">MJリサーチは「調査が終わってからが本当のスタート」と考えています。</div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== SEC10: よくある質問 ===== -->
-<section class="section section-gray">
-  <div class="section-title">
-    <h2>よくある質問</h2>
-    <div class="line"></div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-q"><span class="faq-q-mark">Q</span><span>相談だけでも大丈夫ですか？</span></div>
-    <div class="faq-a"><span class="faq-a-mark">A</span><span>はい、相談だけでもまったく問題ありません。相談・見積もりは完全無料です。「まだ確信が持てない」「とりあえず話を聞いてほしい」という段階でも大歓迎です。</span></div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-q"><span class="faq-q-mark">Q</span><span>追加料金が発生することはありませんか？</span></div>
-    <div class="faq-a"><span class="faq-a-mark">A</span><span>ありません。機材費・車両費・報告書作成費はすべて含まれています。契約時に提示した金額以上の請求は一切いたしません。余った調査時間分は返金いたします。料金は無料相談時に詳しくご説明します。</span></div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-q"><span class="faq-q-mark">Q</span><span>匿名でも相談できますか？</span></div>
-    <div class="faq-a"><span class="faq-a-mark">A</span><span>はい、匿名でのご相談もお受けしております。お電話やメールでお名前を伏せたまま状況だけお伝えいただくことも可能です。</span></div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-q"><span class="faq-q-mark">Q</span><span>相手にバレることはありませんか？</span></div>
-    <div class="faq-a"><span class="faq-a-mark">A</span><span>20年以上の経験で培った尾行・撮影技術により、対象者に気づかれずに調査を完了します。大手探偵社出身のベテランが調査を担当します。</span></div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-q"><span class="faq-q-mark">Q</span><span>他社で証拠が取れなかったのですが…</span></div>
-    <div class="faq-a"><span class="faq-a-mark">A</span><span>他社で結果が出なかったケースでも、当社で証拠を取得した実績が多数あります。まずはお気軽にご相談ください。</span></div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-q"><span class="faq-q-mark">Q</span><span>オンラインで契約できますか？</span></div>
-    <div class="faq-a"><span class="faq-a-mark">A</span><span>はい、ZOOMなどオンラインでの面談・契約にも対応しております。全国12拠点ございますが、来社が難しい場合もご安心ください。</span></div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-q"><span class="faq-q-mark">Q</span><span>調査中に経過報告はもらえますか？</span></div>
-    <div class="faq-a"><span class="faq-a-mark">A</span><span>はい、調査の進捗状況は随時ご報告いたします。リアルタイムでの状況確認も可能です。</span></div>
-  </div>
-</section>
-
-<!-- ===== SEC11: 探偵事務所とは（教育コンテンツ） ===== -->
-<section class="section">
-  <div class="section-title">
-    <h2>探偵事務所に相談するということ</h2>
-    <div class="line"></div>
-  </div>
-
-  <div class="edu-text">
-    <p>
-      探偵事務所は、<strong>探偵業法に基づいて公安委員会に届出を行った正規の事業者</strong>です。違法な調査は一切行いません。<br><br>
-      浮気調査で得た証拠は、<strong>裁判での慰謝料請求や離婚調停</strong>において有力な証拠となります。自分でスマートフォンを確認したり、尾行したりする行為は、逆に法的に不利になることがあります。<br><br>
-      MJリサーチは<strong>東京都公安委員会に届出済み</strong>（第30200349号）の正規事業者です。個人情報保護士も在籍しており、ご相談内容が外部に漏れることは一切ありません。<br><br>
-      「探偵に頼むなんて大げさでは…」と思われるかもしれません。しかし、<strong>証拠がなければ法的に戦えない</strong>のが現実です。まずは無料相談で、あなたの状況に何が必要かを一緒に整理しましょう。
-    </p>
-  </div>
-</section>
-
-
-<!-- ===== SEC13: 全国12拠点 ===== -->
-<section class="section">
-  <div class="section-title">
-    <h2>全国12拠点で対応</h2>
-    <div class="line"></div>
-    <p>お近くの拠点で、対面でのご相談も可能です</p>
-  </div>
-
-  <div class="office-grid">
-    <div class="office-card">
-      <img src="images/office_honsha.jpg" alt="本社">
-      <div class="office-card-body">
-        <strong>本社（東京・新富町）</strong>
-        <p>東京都中央区新富1-16-8<br>新富町営和ビルB1階</p>
-      </div>
-    </div>
-    <div class="office-card">
-      <img src="images/building.jpg" alt="銀座支店">
-      <div class="office-card-body">
-        <strong>銀座支店</strong>
-        <p>東京都中央区銀座8-5-15<br>SVAX GINZAビル6階B</p>
-      </div>
-    </div>
-    <div class="office-card">
-      <img src="images/office_shinagawa.jpg" alt="品川支店">
-      <div class="office-card-body">
-        <strong>品川支店</strong>
-        <p>東京都品川区小山6-28-1<br>AP小山101号</p>
-      </div>
-    </div>
-    <div class="office-card">
-      <img src="images/office_nagoya.jpg" alt="名古屋支店">
-      <div class="office-card-body">
-        <strong>名古屋支店</strong>
-        <p>愛知県名古屋市中区千代田3-32-23<br>アーデルドルフ802号室</p>
-      </div>
-    </div>
-    <div class="office-card">
-      <img src="images/office_osaka.jpg" alt="大阪支店">
-      <div class="office-card-body">
-        <strong>大阪支店</strong>
-        <p>大阪府大阪市東成区大今里西3-11-3<br>Luxe今里702号室</p>
-      </div>
-    </div>
-    <div class="office-card">
-      <img src="images/office_niigata.jpg" alt="新潟支店">
-      <div class="office-card-body">
-        <strong>新潟支店</strong>
-        <p>新潟県新潟市中央区花園二丁目1-16<br>三和ビル202号室</p>
-      </div>
-    </div>
-    <div class="office-card">
-      <img src="images/office_gunma.jpg" alt="群馬支店">
-      <div class="office-card-body">
-        <strong>群馬支社（太田）</strong>
-        <p>群馬県太田市藤阿久町611-5</p>
-      </div>
-    </div>
-    <div class="office-card">
-      <img src="images/office_fukushima.jpg" alt="福島支店">
-      <div class="office-card-body">
-        <strong>福島支店</strong>
-        <p>福島県郡山市虎丸町5-8<br>さくらNTビル504</p>
-      </div>
-    </div>
-  </div>
-
-  <p style="text-align:center; font-size:12px; color:var(--text-light); margin-top:16px;">
-    その他、世田谷・西東京・埼玉・群馬高崎にも拠点あり。オンライン相談も対応。
-  </p>
-</section>
-
-<!-- ===== SEC14: 代表挨拶 ===== -->
-<section class="section section-gray">
-  <div class="section-title">
-    <h2>代表挨拶</h2>
-    <div class="line"></div>
-  </div>
-  <div class="ceo-section">
-    <img src="images/ceo_okajima.jpg" alt="代表 岡島誠" class="ceo-photo">
-    <div>
-      <p class="ceo-name">綜合探偵社MJリサーチ 代表<strong>岡島誠</strong></p>
-      <p class="ceo-text">
-        大手探偵社で25年の調査経験を積み、ご依頼者様を第一に考え、東京都中央区に事務所を設立いたしました。<br><br>
-        「すべてはご相談者様のために」——料金の不透明さや追加請求といった業界の悪しき慣習を無くし、明確なプラン料金と確実な調査で、ご相談者様の新しい一歩を全力でサポートいたします。<br><br>
-        調査の実力は、YouTubeで公開しています。やらせのない、リアルな調査映像をぜひご覧ください。
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== CTA⑤ FINAL ===== -->
-<section class="bottom-cta" id="final-cta">
-  <h2>今日相談すれば、<br>最短で今日から調査開始</h2>
-  <p class="whynow">証拠が消える前に。気づいた今が動くときです。</p>
-
-  <a href="tel:0120-979-383" class="cta-main" style="max-width: 360px;">
-    今すぐ無料で電話相談する
-    <small>24時間365日対応・通話料無料・0120-979-383</small>
-  </a>
-  <a href="#inquiry-form" class="cta-sub" style="max-width: 360px; margin-top:10px;">
-    メールで無料相談する
-    <small>24時間受付・匿名OK</small>
-  </a>
-  <p style="color:#999; font-size:12px; margin-top:12px;">相談だけでもOK。料金は一切かかりません。</p>
-</section>
-
-<!-- ===== INQUIRY FORM ===== -->
-<section class="section" id="inquiry-form">
-  <div class="section-title">
-    <h2>メールでのご相談</h2>
-    <div class="line"></div>
-    <p>24時間受付・匿名OK・無料</p>
-  </div>
-
-  <form action="https://mj-research.co.jp/inq/" method="get" style="max-width:480px; margin:0 auto;">
-    <div style="margin-bottom:16px;">
-      <label style="font-size:14px; font-weight:bold; display:block; margin-bottom:4px;">お名前（匿名可）</label>
-      <input type="text" name="name" placeholder="匿名でも構いません" style="width:100%; padding:12px; border:1px solid #ddd; border-radius:8px; font-size:14px;">
-    </div>
-    <div style="margin-bottom:16px;">
-      <label style="font-size:14px; font-weight:bold; display:block; margin-bottom:4px;">メールアドレス</label>
-      <input type="email" name="email" placeholder="example@mail.com" style="width:100%; padding:12px; border:1px solid #ddd; border-radius:8px; font-size:14px;">
-    </div>
-    <div style="margin-bottom:16px;">
-      <label style="font-size:14px; font-weight:bold; display:block; margin-bottom:4px;">電話番号（任意）</label>
-      <input type="tel" name="phone" placeholder="090-0000-0000" style="width:100%; padding:12px; border:1px solid #ddd; border-radius:8px; font-size:14px;">
-    </div>
-    <div style="margin-bottom:16px;">
-      <label style="font-size:14px; font-weight:bold; display:block; margin-bottom:4px;">ご相談内容</label>
-      <textarea name="message" rows="5" placeholder="お気軽にご記入ください。どんな些細なことでも構いません。" style="width:100%; padding:12px; border:1px solid #ddd; border-radius:8px; font-size:14px; resize:vertical;"></textarea>
-    </div>
-    <button type="submit" style="width:100%; padding:16px; background:var(--orange); color:var(--white); border:none; border-radius:10px; font-size:16px; font-weight:bold; cursor:pointer;">
-      無料相談を送信する
-    </button>
-    <p style="text-align:center; font-size:11px; color:var(--gray); margin-top:8px;">個人情報保護士在籍。ご相談内容が外部に漏れることはありません。</p>
-  </form>
-</section>
-
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
-  <p class="footer-license">探偵業届出番号：東京都公安委員会 第30200349号</p>
-  <p>Copyright &copy; MJリサーチ綜合探偵社 All Rights Reserved.</p>
-</footer>
-
+            document.querySelectorAll('.reveal-up').forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
 </body>
 </html>
