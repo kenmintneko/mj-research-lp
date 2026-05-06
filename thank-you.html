@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>送信完了｜綜合探偵社MJリサーチ</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { DEFAULT: '#1a2340', 800: '#151c33', 900: '#0e1322' },
+                        gold: { DEFAULT: '#c9a84c', light: '#dcc686', dark: '#b09038' },
+                        cta: { DEFAULT: '#e67e22', hover: '#d36e1c' },
+                        offwhite: '#f8f9fa',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Shippori Mincho"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        .animate-bounce-slow { animation: bounce 2s infinite; }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    </style>
+</head>
+<body class="text-navy selection:bg-gold selection:text-navy font-sans">
+    <div class="w-full max-w-[750px] mx-auto bg-white min-h-screen flex flex-col overflow-x-hidden">
+        <!-- Header -->
+        <header class="sticky top-0 z-50 w-full bg-white border-b border-gray-100 flex justify-center items-center px-4 py-3">
+            <div class="flex items-center gap-2">
+                <img src="images/logo.png" alt="綜合探偵社MJリサーチ" class="h-6 w-auto object-contain">
+                <span class="font-serif font-bold text-navy text-xs tracking-widest">綜合探偵社MJリサーチ</span>
+            </div>
+        </header>
+
+        <!-- Thank You Section -->
+        <section class="flex-1 flex flex-col items-center justify-center px-5 py-16 text-center">
+            <!-- Success Icon -->
+            <div class="mb-8">
+                <div class="inline-block p-6 bg-green-100 rounded-full animate-bounce-slow">
+                    <i class="ph-fill ph-check-circle text-green-600 text-6xl"></i>
+                </div>
+            </div>
+
+            <!-- Headline -->
+            <h1 class="font-serif text-3xl font-bold text-navy mb-4 leading-tight">
+                送信完了しました
+            </h1>
+
+            <!-- Message -->
+            <p class="text-lg text-gray-600 mb-2">
+                ご相談ありがとうございます
+            </p>
+            <p class="text-sm text-gray-500 mb-8 max-w-md">
+                お送りいただいた情報は当社で確認させていただき、<br>
+                営業時間内にご連絡させていただきます。<br>
+                <br>
+                24時間以内にご連絡がない場合は、<br>
+                お手数ですがお電話でお問い合わせください。
+            </p>
+
+            <!-- Info Box -->
+            <div class="bg-navy/5 rounded-xl p-6 mb-8 w-full max-w-sm border border-navy/10">
+                <div class="flex items-center gap-3 mb-4">
+                    <i class="ph-fill ph-phone text-gold text-xl"></i>
+                    <div class="text-left">
+                        <p class="text-xs text-gray-500 font-bold">お急ぎの場合はお電話ください</p>
+                        <p class="font-serif font-bold text-lg text-navy">0120-557-195</p>
+                    </div>
+                </div>
+                <p class="text-[10px] text-gray-500">営業時間：24時間受付</p>
+            </div>
+
+            <!-- CTA Button -->
+            <a href="index.html" class="inline-block bg-cta text-white font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity mb-6">
+                トップページに戻る
+            </a>
+
+            <!-- Additional Info -->
+            <div class="text-[10px] text-gray-400 space-y-1">
+                <p>個人情報保護方針に基づき、安全にお取り扱いさせていただきます。</p>
+                <p>ご相談内容は厳密に機密扱いとなります。</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-navy-900 border-t border-white/5 px-5 py-8 text-center text-gray-400 text-[10px]">
+            <img src="images/logo.png" alt="綜合探偵社MJリサーチ" class="h-6 mx-auto mb-3 opacity-60 grayscale">
+            <p class="font-bold text-gray-300 mb-1">綜合探偵社MJリサーチ｜探偵業届出番号：東京都公安委員会 第30200349号</p>
+            <p>Copyright &copy; MJリサーチ綜合探偵社 All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
